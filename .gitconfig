@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = jon kurinsky
+	email = jkurinsky@gmail.com
+[core]
+	editor = code --wait
+	excludesfile = /Users/krnsk0/.gitignore_global
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	co = checkout
+	unstage = reset HEAD --
+	last = log -1 HEAD
