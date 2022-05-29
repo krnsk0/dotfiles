@@ -27,6 +27,22 @@ alias gcam='git commit --amend -m'
 # function to make a new branch after making commits to master by accident
 newbranch() { git checkout -b $1 && git branch -D main && git checkout main && git pull && git checkout $1 }
 
+# rust aliases
+alias cnew="cargo new --vcs=none"
+alias cr="cargo run"
+alias cw="cargo watch -x run"
+alias ct="cargo watch -x check -x test"
+
+# get per-tab history
+unsetopt inc_append_history
+unsetopt share_history
+
+# set up fnm, node version manager written in rust
+# https://github.com/Schniz/fnm#shell-setup
+eval "$(fnm env)"
+
+## SCREENCASTIFY ##
+
 # aliases for opening reops
 alias sc="cd /Users/krnsk0/Desktop/screencastify/ && code sc.code-workspace"
 alias edit="cd /Users/krnsk0/Desktop/castify-edit-broker/ && code ."
@@ -39,18 +55,3 @@ alias codegen="npx nx codegen studio-database-clients"
 alias lint="npx nx affected:lint"
 alias cleanup="npx nx clear-tasks dev-studio-tasks && npx nx clean-init graphql-engine"
 alias nxt="npx nx test"
-
-# rust aliases
-alias cnew="cargo new --vcs=none"
-alias cr="cargo run"
-alias cw="cargo watch -x run"
-alias ct="cargo watch -x check -x test"
-
-# get per-tab history
-unsetopt inc_append_history
-unsetopt share_history
-
-
-# set up fnm, node version manager written in rust
-# https://github.com/Schniz/fnm#shell-setup
-eval "$(fnm env)"
