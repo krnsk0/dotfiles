@@ -48,10 +48,12 @@ alias sc="cd /Users/krnsk0/Desktop/screencastify/ && code sc.code-workspace"
 alias edit="cd /Users/krnsk0/Desktop/castify-edit-broker/ && code ."
 alias exp="cd /Users/krnsk0/Desktop/edit-experiments/ && code ."
 
-# castify monorepo
-alias format="npx nx format:write"
+# screecastify monorepo
 alias start="npm run serve-studio-v"
-alias codegen="npx nx codegen studio-database-clients"
-alias lint="npx nx affected:lint"
 alias cleanup="npx nx clear-tasks dev-studio-tasks && npx nx clean-init graphql-engine"
-alias nxt="npx nx test"
+alias codegen="npx nx codegen studio-database-clients"
+alias test="npx nx test" # needs args passed
+alias format="npx nx format:write"
+alias lint="npx nx affected:lint"
+alias presets="npx nx run dev-video-cli:make-presets"
+alias ingest="npx nx run dev-video-cli:ingest" # needs args passed
