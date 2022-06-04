@@ -49,7 +49,7 @@ alias edit="cd /Users/krnsk0/Desktop/castify-edit-broker/ && code ."
 alias exp="cd /Users/krnsk0/Desktop/edit-experiments/ && code ."
 
 # screecastify monorepo
-alias start="npm run serve-studio-v"
+
 alias cleanup="npx nx clear-tasks dev-studio-tasks && npx nx clean-init graphql-engine"
 alias codegen="npx nx codegen studio-database-clients"
 alias test="npx nx test" # needs args passed
@@ -57,3 +57,5 @@ alias format="npx nx format:write"
 alias lint="npx nx affected:lint"
 alias presets="npx nx run dev-video-cli:make-presets"
 alias ingest="npx nx run dev-video-cli:ingest" # needs args passed
+alias edit_start="code ~/.config/iterm2/AppSupport/Scripts/screencastify_start.py"
+alias start="~/.config/iterm2/AppSupport/iterm2env-3.7/versions/3.7.9/bin/python3 ~/.config/iterm2/AppSupport/Scripts/screencastify_start.py"
